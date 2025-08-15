@@ -275,7 +275,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 
         // Set viewport and scissor
         D3D12_VIEWPORT viewport = { 0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height), 0.0f, 1.0f };
-        D3D12_RECT scissor_rect = { 0, 0, LONG_MAX, LONG_MAX };
+        D3D12_RECT scissor_rect = { 0, 0, width, height };
         command_list->RSSetViewports(1, &viewport);
         command_list->RSSetScissorRects(1, &scissor_rect);
 
